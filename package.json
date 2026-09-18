@@ -1,14 +1,12 @@
 {
-  "name": "gateway-order-ref-middleware",
+  "name": "project",
   "version": "1.0.0",
   "description": "Express middleware that fronts PayPal REST + Stripe so customers and gateway dashboards reference your own order number, while the real gateway transaction ID stays in your database for reconciliation, refunds and disputes.",
   "main": "src/server.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js",
-    "init-db": "node scripts/init-db.js",
-    "test": "node --test"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "engines": {
     "node": ">=18"
